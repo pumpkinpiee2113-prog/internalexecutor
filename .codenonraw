@@ -209,12 +209,14 @@ G2L["17"]["Name"] = [[Bar4]];
 G2L["18"] = Instance.new("ScrollingFrame", G2L["3"]);
 G2L["18"]["Active"] = true;
 G2L["18"]["ZIndex"] = 2;
+G2L["18"]["HorizontalScrollBarInset"] = Enum.ScrollBarInset.ScrollBar;
 -- [ERROR] cannot convert TopImageContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
 G2L["18"]["TopImage"] = [[]];
 G2L["18"]["Name"] = [[ScriptEditor]];
 G2L["18"]["BackgroundColor3"] = Color3.fromRGB(28, 28, 28);
 -- [ERROR] cannot convert BottomImageContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
 G2L["18"]["BottomImage"] = [[]];
+G2L["18"]["AutomaticCanvasSize"] = Enum.AutomaticSize.XY;
 G2L["18"]["Size"] = UDim2.new(0, 580, 0, 227);
 G2L["18"]["ScrollBarImageColor3"] = Color3.fromRGB(63, 63, 63);
 G2L["18"]["Position"] = UDim2.new(0.07207, 0, 0.269, 0);
@@ -424,6 +426,7 @@ G2L["2b"]["Name"] = [[Output]];
 G2L["2b"]["BackgroundColor3"] = Color3.fromRGB(28, 28, 28);
 -- [ERROR] cannot convert BottomImageContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
 G2L["2b"]["BottomImage"] = [[]];
+G2L["2b"]["AutomaticCanvasSize"] = Enum.AutomaticSize.XY;
 G2L["2b"]["Size"] = UDim2.new(0, 175, 0, 227);
 G2L["2b"]["ScrollBarImageColor3"] = Color3.fromRGB(63, 63, 63);
 G2L["2b"]["Position"] = UDim2.new(0.77305, 0, 0.26896, 0);
@@ -1145,28 +1148,11 @@ local script = G2L["1a"];
 	-- CANVAS RESIZE
 	---------------------------------------------------
 	
-	local cachedText = nil
-	local cachedW = 0
-	
 	local function updateCanvas()
 		local textHeight = textBox.TextBounds.Y + 20
 	
-		if textBox.Text ~= cachedText then
-			cachedText = textBox.Text
-			local maxW = 0
-			for line in string.gmatch(cachedText .. "\n", "([^\n]*)\n") do
-				local w = TextService:GetTextSize(line, 17, Enum.Font.Code, Vector2.new(100000, 20)).X
-				if w > maxW then maxW = w end
-			end
-			cachedW = math.ceil(maxW) + 20
-		end
-	
 		if parentFrame:IsA("ScrollingFrame") then
-			local width = math.max(cachedW + 40, parentFrame.AbsoluteSize.X)
-			parentFrame.CanvasSize = UDim2.new(0, width, 0, textHeight)
-			textBox.Size = UDim2.new(0, width - 40, 0, textHeight)
-			overlay.Size = UDim2.new(0, width - 40, 0, textHeight)
-			lineNumbers.Size = UDim2.new(0, 40, 0, textHeight)
+			parentFrame.CanvasSize = UDim2.new(0, 0, 0, textHeight)
 		end
 	end
 	
@@ -1422,7 +1408,60 @@ local script = G2L["1a"];
 			end)
 		end
 	
-		-- Output console is a separate LocalScript under the Output TextLabel (see ConsoleMirror.lua).
+		local attached = false
+	
+		local attachBtn = bar:FindFirstChild("Attatch") or bar:FindFirstChild("Attach")
+		if attachBtn and attachBtn:IsA("GuiButton") then
+			attachBtn.Activated:Connect(function()
+				if attached then
+					pcall(function()
+						game:GetService("StarterGui"):SetCore("SendNotification", {
+							Title = "Attach Error";
+							Text = "You are already attached";
+							Button1 = "Okay";
+							Duration = 5;
+						})
+					end)
+					return
+				end
+				attached = true
+			end)
+		end
+	
+		local execBtn = bar:FindFirstChild("Execute")
+		if execBtn and execBtn:IsA("GuiButton") then
+			execBtn.Activated:Connect(function()
+				if not attached then
+					pcall(function()
+						game:GetService("StarterGui"):SetCore("SendNotification", {
+							Title = "Execution Error";
+							Text = "You must attach the client inorder to execute";
+							Button1 = "Okay";
+							Duration = 5;
+						})
+					end)
+					return
+				end
+				local chunk, compileErr
+				local okLoad, loadErr = pcall(function()
+					chunk, compileErr = loadstring(textBox.Text)
+				end)
+				if not okLoad then
+					warn("[CodeEditor] loadstring unavailable: " .. tostring(loadErr))
+					return
+				end
+				if not chunk then
+					warn("[CodeEditor] compile error: " .. tostring(compileErr))
+					return
+				end
+	
+				--line 442
+				local okRun, runErr = pcall(chunk)
+				if not okRun then
+					warn("[CodeEditor] runtime error: " .. tostring(runErr))
+				end
+			end)
+		end
 	end
 end;
 task.spawn(C_1a);
