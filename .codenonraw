@@ -1,0 +1,716 @@
+--[=[
+ d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
+88' Y8b 88    88   `88'        VP  `8D      88      88    88 d8' `8b 
+88      88    88    88            odD'      88      88    88 88ooo88 
+88  ooo 88    88    88          .88'        88      88    88 88~~~88 
+88. ~8~ 88b  d88   .88.        j88.         88booo. 88b  d88 88   88    @uniquadev
+ Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
+]=]
+
+-- Instances: 34 | Scripts: 1 | Modules: 0 | Tags: 0
+local G2L = {};
+
+-- StarterGui..dll Internal.exe
+G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"]["Name"] = [[.dll Internal.exe]];
+G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+
+
+-- StarterGui..dll Internal.exe.UI
+G2L["2"] = Instance.new("Frame", G2L["1"]);
+G2L["2"]["BorderSizePixel"] = 0;
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(63, 63, 63);
+G2L["2"]["Size"] = UDim2.new(0, 758, 0, 385);
+G2L["2"]["Position"] = UDim2.new(0.17001, 17, 0.15404, -6);
+G2L["2"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["2"]["Name"] = [[UI]];
+
+
+-- StarterGui..dll Internal.exe.UI.Bar2
+G2L["3"] = Instance.new("Frame", G2L["2"]);
+G2L["3"]["BorderSizePixel"] = 0;
+G2L["3"]["BackgroundColor3"] = Color3.fromRGB(55, 55, 55);
+G2L["3"]["Size"] = UDim2.new(0, 18, 0, 333);
+G2L["3"]["Position"] = UDim2.new(0.03417, 0, 0.09402, 0);
+G2L["3"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["3"]["Name"] = [[Bar2]];
+
+
+-- StarterGui..dll Internal.exe.UI.UIDragDetector
+G2L["4"] = Instance.new("UIDragDetector", G2L["2"]);
+G2L["4"]["DragUDim2"] = UDim2.new(0, 7, 0, 0);
+
+
+-- StarterGui..dll Internal.exe.UI.Logo
+G2L["5"] = Instance.new("ImageLabel", G2L["2"]);
+G2L["5"]["ZIndex"] = 3;
+G2L["5"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5"]["Size"] = UDim2.new(0, 42, 0, 42);
+G2L["5"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["5"]["BackgroundTransparency"] = 1;
+G2L["5"]["Name"] = [[Logo]];
+G2L["5"]["Position"] = UDim2.new(0, 0, -0.03738, 0);
+
+
+-- StarterGui..dll Internal.exe.UI.Bar3
+G2L["6"] = Instance.new("Frame", G2L["2"]);
+G2L["6"]["BorderSizePixel"] = 0;
+G2L["6"]["BackgroundColor3"] = Color3.fromRGB(55, 55, 55);
+G2L["6"]["Size"] = UDim2.new(0, 714, 0, 45);
+G2L["6"]["Position"] = UDim2.new(0.05541, 0, 0.84046, 0);
+G2L["6"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["6"]["Name"] = [[Bar3]];
+
+
+-- StarterGui..dll Internal.exe.UI.Bar3.Execute
+G2L["7"] = Instance.new("TextButton", G2L["6"]);
+G2L["7"]["TextSize"] = 17;
+G2L["7"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7"]["BackgroundColor3"] = Color3.fromRGB(125, 125, 125);
+G2L["7"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["7"]["ZIndex"] = 2;
+G2L["7"]["Size"] = UDim2.new(0, 74, 0, 32);
+G2L["7"]["BorderColor3"] = Color3.fromRGB(101, 101, 101);
+G2L["7"]["Text"] = [[Execute]];
+G2L["7"]["Name"] = [[Execute]];
+G2L["7"]["Position"] = UDim2.new(0.05013, 0, 0.87464, 0);
+
+
+-- StarterGui..dll Internal.exe.UI.Bar3.Execute.UIGradient
+G2L["8"] = Instance.new("UIGradient", G2L["7"]);
+G2L["8"]["Rotation"] = 90;
+G2L["8"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(189, 189, 189))};
+
+
+-- StarterGui..dll Internal.exe.UI.Bar3.Clear
+G2L["9"] = Instance.new("TextButton", G2L["6"]);
+G2L["9"]["TextSize"] = 17;
+G2L["9"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["9"]["BackgroundColor3"] = Color3.fromRGB(125, 125, 125);
+G2L["9"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["9"]["ZIndex"] = 2;
+G2L["9"]["Size"] = UDim2.new(0, 84, 0, 32);
+G2L["9"]["BorderColor3"] = Color3.fromRGB(101, 101, 101);
+G2L["9"]["Text"] = [[Clear]];
+G2L["9"]["Name"] = [[Clear]];
+G2L["9"]["Position"] = UDim2.new(0.16095, 0, 0.87464, 0);
+
+
+-- StarterGui..dll Internal.exe.UI.Bar3.Clear.UIGradient
+G2L["a"] = Instance.new("UIGradient", G2L["9"]);
+G2L["a"]["Rotation"] = 90;
+G2L["a"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(189, 189, 189))};
+
+
+-- StarterGui..dll Internal.exe.UI.Bar3.UIGridLayout
+G2L["b"] = Instance.new("UIGridLayout", G2L["6"]);
+G2L["b"]["CellSize"] = UDim2.new(0, 84, 0, 32);
+G2L["b"]["VerticalAlignment"] = Enum.VerticalAlignment.Center;
+G2L["b"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+G2L["b"]["CellPadding"] = UDim2.new(0, 10, 0, 5);
+
+
+-- StarterGui..dll Internal.exe.UI.Bar3.Options
+G2L["c"] = Instance.new("TextButton", G2L["6"]);
+G2L["c"]["TextSize"] = 17;
+G2L["c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["c"]["BackgroundColor3"] = Color3.fromRGB(125, 125, 125);
+G2L["c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["c"]["ZIndex"] = 2;
+G2L["c"]["Size"] = UDim2.new(0, 77, 0, 32);
+G2L["c"]["BorderColor3"] = Color3.fromRGB(101, 101, 101);
+G2L["c"]["Text"] = [[Options]];
+G2L["c"]["Name"] = [[Options]];
+G2L["c"]["Position"] = UDim2.new(0.62533, 0, 0.87464, 0);
+
+
+-- StarterGui..dll Internal.exe.UI.Bar3.Options.UIGradient
+G2L["d"] = Instance.new("UIGradient", G2L["c"]);
+G2L["d"]["Rotation"] = 90;
+G2L["d"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(189, 189, 189))};
+
+
+-- StarterGui..dll Internal.exe.UI.Bar3.Attach
+G2L["e"] = Instance.new("TextButton", G2L["6"]);
+G2L["e"]["TextSize"] = 17;
+G2L["e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["e"]["BackgroundColor3"] = Color3.fromRGB(61, 61, 61);
+G2L["e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["e"]["ZIndex"] = 2;
+G2L["e"]["Size"] = UDim2.new(0, 77, 0, 25);
+G2L["e"]["BorderColor3"] = Color3.fromRGB(101, 101, 101);
+G2L["e"]["Text"] = [[Attach]];
+G2L["e"]["Name"] = [[Attach]];
+G2L["e"]["Position"] = UDim2.new(0.74538, 0, 0.88468, 0);
+
+
+-- StarterGui..dll Internal.exe.UI.Bar3.Attach.UIGradient
+G2L["f"] = Instance.new("UIGradient", G2L["e"]);
+G2L["f"]["Rotation"] = 90;
+G2L["f"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(189, 189, 189))};
+
+
+-- StarterGui..dll Internal.exe.UI.Bar5
+G2L["10"] = Instance.new("Frame", G2L["2"]);
+G2L["10"]["BorderSizePixel"] = 0;
+G2L["10"]["BackgroundColor3"] = Color3.fromRGB(55, 55, 55);
+G2L["10"]["Size"] = UDim2.new(0, 732, 0, 8);
+G2L["10"]["Position"] = UDim2.new(0.03417, 0, 0.07324, 0);
+G2L["10"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["10"]["Name"] = [[Bar5]];
+
+
+-- StarterGui..dll Internal.exe.UI.Bar4
+G2L["11"] = Instance.new("Frame", G2L["2"]);
+G2L["11"]["BorderSizePixel"] = 0;
+G2L["11"]["BackgroundColor3"] = Color3.fromRGB(55, 55, 55);
+G2L["11"]["Size"] = UDim2.new(0, 11, 0, 291);
+G2L["11"]["Position"] = UDim2.new(0.87123, 0, 0.09142, 0);
+G2L["11"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["11"]["Name"] = [[Bar4]];
+
+
+-- StarterGui..dll Internal.exe.UI.ScrollingFrame
+G2L["12"] = Instance.new("ScrollingFrame", G2L["2"]);
+G2L["12"]["Active"] = true;
+G2L["12"]["ZIndex"] = 2;
+-- [ERROR] cannot convert TopImageContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
+G2L["12"]["TopImage"] = [[]];
+G2L["12"]["BackgroundColor3"] = Color3.fromRGB(28, 28, 28);
+-- [ERROR] cannot convert BottomImageContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
+G2L["12"]["BottomImage"] = [[]];
+G2L["12"]["Size"] = UDim2.new(0, 613, 0, 227);
+G2L["12"]["ScrollBarImageColor3"] = Color3.fromRGB(63, 63, 63);
+G2L["12"]["Position"] = UDim2.new(0.05917, 0, 0.249, 0);
+G2L["12"]["BorderColor3"] = Color3.fromRGB(101, 101, 101);
+
+
+-- StarterGui..dll Internal.exe.UI.ScrollingFrame.TextBox
+G2L["13"] = Instance.new("TextBox", G2L["12"]);
+G2L["13"]["ZIndex"] = 2;
+G2L["13"]["BorderSizePixel"] = 0;
+G2L["13"]["TextSize"] = 14;
+G2L["13"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["13"]["BackgroundColor3"] = Color3.fromRGB(28, 28, 28);
+G2L["13"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["13"]["Size"] = UDim2.new(0, 613, 0, 227);
+G2L["13"]["Position"] = UDim2.new(0, 0, 0, 0);
+G2L["13"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["13"]["Text"] = [[]];
+
+
+-- StarterGui..dll Internal.exe.UI.ScrollingFrame.TextBox.MainEditorScript
+G2L["14"] = Instance.new("LocalScript", G2L["13"]);
+G2L["14"]["Name"] = [[MainEditorScript]];
+
+
+-- StarterGui..dll Internal.exe.UI.Bar6
+G2L["15"] = Instance.new("Frame", G2L["2"]);
+G2L["15"]["BorderSizePixel"] = 0;
+G2L["15"]["BackgroundColor3"] = Color3.fromRGB(55, 55, 55);
+G2L["15"]["Size"] = UDim2.new(0, 11, 0, 290);
+G2L["15"]["Position"] = UDim2.new(0.98597, 0, 0.09402, 0);
+G2L["15"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["15"]["Name"] = [[Bar6]];
+
+
+-- StarterGui..dll Internal.exe.UI.Bar7
+G2L["16"] = Instance.new("Frame", G2L["2"]);
+G2L["16"]["ZIndex"] = 2;
+G2L["16"]["BorderSizePixel"] = 0;
+G2L["16"]["BackgroundColor3"] = Color3.fromRGB(201, 201, 201);
+G2L["16"]["Size"] = UDim2.new(0, 758, 0, 42);
+G2L["16"]["Position"] = UDim2.new(-0.0002, 0, -0.03738, 0);
+G2L["16"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["16"]["Name"] = [[Bar7]];
+
+
+-- StarterGui..dll Internal.exe.UI.Bar7.UIGradient
+G2L["17"] = Instance.new("UIGradient", G2L["16"]);
+G2L["17"]["Rotation"] = 90;
+G2L["17"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(80, 159, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(114, 95, 255))};
+
+
+-- StarterGui..dll Internal.exe.UI.Bar7.Minimize
+G2L["18"] = Instance.new("TextButton", G2L["16"]);
+G2L["18"]["TextWrapped"] = true;
+G2L["18"]["TextSize"] = 14;
+G2L["18"]["TextScaled"] = true;
+G2L["18"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["18"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["18"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["18"]["ZIndex"] = 3;
+G2L["18"]["BackgroundTransparency"] = 1;
+G2L["18"]["Size"] = UDim2.new(0, 23, 0, 23);
+G2L["18"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["18"]["Text"] = [[-]];
+G2L["18"]["Name"] = [[Minimize]];
+G2L["18"]["Position"] = UDim2.new(0.92372, 0, 0.20494, 0);
+
+
+-- StarterGui..dll Internal.exe.UI.Bar7.Close
+G2L["19"] = Instance.new("TextButton", G2L["16"]);
+G2L["19"]["TextWrapped"] = true;
+G2L["19"]["TextSize"] = 14;
+G2L["19"]["TextScaled"] = true;
+G2L["19"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["19"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["19"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["19"]["ZIndex"] = 3;
+G2L["19"]["BackgroundTransparency"] = 1;
+G2L["19"]["Size"] = UDim2.new(0, 23, 0, 23);
+G2L["19"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["19"]["Text"] = [[X]];
+G2L["19"]["Name"] = [[Close]];
+G2L["19"]["Position"] = UDim2.new(0.95526, 0, 0.20494, 0);
+
+
+-- StarterGui..dll Internal.exe.UI.Bar7.Title
+G2L["1a"] = Instance.new("TextLabel", G2L["16"]);
+G2L["1a"]["TextWrapped"] = true;
+G2L["1a"]["ZIndex"] = 3;
+G2L["1a"]["TextSize"] = 16;
+G2L["1a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["1a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1a"]["BackgroundTransparency"] = 1;
+G2L["1a"]["Size"] = UDim2.new(0, 200, 0, 33);
+G2L["1a"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["1a"]["Text"] = [[.dll v1.2.5]];
+G2L["1a"]["Name"] = [[Title]];
+G2L["1a"]["Position"] = UDim2.new(0.35482, 0, 0.09413, 0);
+
+
+-- StarterGui..dll Internal.exe.UI.Title
+G2L["1b"] = Instance.new("TextLabel", G2L["2"]);
+G2L["1b"]["TextWrapped"] = true;
+G2L["1b"]["ZIndex"] = 3;
+G2L["1b"]["TextSize"] = 35;
+G2L["1b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1b"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Light, Enum.FontStyle.Normal);
+G2L["1b"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1b"]["BackgroundTransparency"] = 1;
+G2L["1b"]["Size"] = UDim2.new(0, 168, 0, 26);
+G2L["1b"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["1b"]["Text"] = [[Execution]];
+G2L["1b"]["Name"] = [[Title]];
+G2L["1b"]["Position"] = UDim2.new(0.05666, 0, 0.09142, 0);
+
+
+-- StarterGui..dll Internal.exe.UI.Bar8
+G2L["1c"] = Instance.new("Frame", G2L["2"]);
+G2L["1c"]["BorderSizePixel"] = 0;
+G2L["1c"]["BackgroundColor3"] = Color3.fromRGB(55, 55, 55);
+G2L["1c"]["Size"] = UDim2.new(0, 618, 0, 34);
+G2L["1c"]["Position"] = UDim2.new(0.05917, 0, 0.15646, 0);
+G2L["1c"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["1c"]["Name"] = [[Bar8]];
+
+
+-- StarterGui..dll Internal.exe.UI.Bar8.1
+G2L["1d"] = Instance.new("TextButton", G2L["1c"]);
+G2L["1d"]["TextSize"] = 17;
+G2L["1d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1d"]["BackgroundColor3"] = Color3.fromRGB(125, 125, 125);
+G2L["1d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["1d"]["ZIndex"] = 2;
+G2L["1d"]["Size"] = UDim2.new(0, 74, 0, 32);
+G2L["1d"]["BorderColor3"] = Color3.fromRGB(101, 101, 101);
+G2L["1d"]["Text"] = [[Script 1]];
+G2L["1d"]["Name"] = [[1]];
+G2L["1d"]["Position"] = UDim2.new(0.05013, 0, 0.87464, 0);
+
+
+-- StarterGui..dll Internal.exe.UI.Bar8.1.UIGradient
+G2L["1e"] = Instance.new("UIGradient", G2L["1d"]);
+G2L["1e"]["Rotation"] = 90;
+G2L["1e"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(189, 189, 189))};
+
+
+-- StarterGui..dll Internal.exe.UI.Bar8.UIGridLayout
+G2L["1f"] = Instance.new("UIGridLayout", G2L["1c"]);
+G2L["1f"]["CellSize"] = UDim2.new(0, 76, 0, 22);
+G2L["1f"]["VerticalAlignment"] = Enum.VerticalAlignment.Center;
+G2L["1f"]["CellPadding"] = UDim2.new(0, 10, 0, 5);
+
+
+-- StarterGui..dll Internal.exe.UI.Bar8.6 NewScript
+G2L["20"] = Instance.new("TextButton", G2L["1c"]);
+G2L["20"]["TextSize"] = 17;
+G2L["20"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["20"]["BackgroundColor3"] = Color3.fromRGB(61, 61, 61);
+G2L["20"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["20"]["ZIndex"] = 2;
+G2L["20"]["Size"] = UDim2.new(0, 77, 0, 25);
+G2L["20"]["BorderColor3"] = Color3.fromRGB(101, 101, 101);
+G2L["20"]["Text"] = [[+]];
+G2L["20"]["Name"] = [[6 NewScript]];
+G2L["20"]["Position"] = UDim2.new(0.74538, 0, 0.88468, 0);
+
+
+-- StarterGui..dll Internal.exe.UI.Bar8.6 NewScript.UIGradient
+G2L["21"] = Instance.new("UIGradient", G2L["20"]);
+G2L["21"]["Rotation"] = 90;
+G2L["21"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(189, 189, 189))};
+
+
+-- StarterGui..dll Internal.exe.UI.Scripts
+G2L["22"] = Instance.new("Folder", G2L["2"]);
+G2L["22"]["Name"] = [[Scripts]];
+
+
+-- StarterGui..dll Internal.exe.UI.ScrollingFrame.TextBox.MainEditorScript
+local function C_14()
+local script = G2L["14"];
+	local textBox = script.Parent
+	local parentFrame = textBox.Parent
+	
+	local RunService = game:GetService("RunService")
+	local TextService = game:GetService("TextService")
+	
+	---------------------------------------------------
+	-- TEXTBOX SETUP
+	---------------------------------------------------
+	
+	textBox.ClearTextOnFocus = false
+	textBox.MultiLine = true
+	textBox.TextWrapped = false
+	textBox.Font = Enum.Font.Code
+	textBox.TextXAlignment = Enum.TextXAlignment.Left
+	textBox.TextYAlignment = Enum.TextYAlignment.Top
+	textBox.BackgroundTransparency = 1
+	textBox.BorderSizePixel = 0
+	
+	textBox.TextTransparency = 1
+	textBox.ZIndex = 2
+	
+	textBox.TextSize = 17
+	textBox:GetPropertyChangedSignal("TextSize"):Connect(function()
+		textBox.TextSize = 17
+	end)
+	
+	textBox.Position = UDim2.new(0, 40, 0, 0)
+	textBox.Size = UDim2.new(1, -40, 1, 0)
+	
+	if textBox.Text == "" then
+		textBox.Text = 'print("Hello world!")'
+	end
+	
+	---------------------------------------------------
+	-- LINE NUMBERS
+	---------------------------------------------------
+	
+	local lineNumbers = parentFrame:FindFirstChild("LineNumbers")
+	if not lineNumbers then
+		lineNumbers = Instance.new("TextLabel")
+		lineNumbers.Name = "LineNumbers"
+		lineNumbers.Parent = parentFrame
+	
+		lineNumbers.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+		lineNumbers.BorderSizePixel = 0
+		lineNumbers.Position = UDim2.new(0, 0, 0, 0)
+		lineNumbers.Size = UDim2.new(0, 40, 1, 0)
+	
+		lineNumbers.Font = Enum.Font.Code
+		lineNumbers.TextSize = 17
+		lineNumbers.TextColor3 = Color3.fromRGB(170, 170, 170)
+	
+		lineNumbers.TextXAlignment = Enum.TextXAlignment.Center
+		lineNumbers.TextYAlignment = Enum.TextYAlignment.Top
+		lineNumbers.TextWrapped = false
+	end
+	
+	lineNumbers:GetPropertyChangedSignal("TextSize"):Connect(function()
+		lineNumbers.TextSize = 17
+	end)
+	
+	---------------------------------------------------
+	-- SYNTAX OVERLAY
+	---------------------------------------------------
+	
+	local overlay = parentFrame:FindFirstChild("SyntaxOverlay")
+	if not overlay then
+		overlay = Instance.new("TextLabel")
+		overlay.Name = "SyntaxOverlay"
+		overlay.Parent = parentFrame
+	end
+	
+	overlay.BackgroundTransparency = 1
+	overlay.Font = Enum.Font.Code
+	overlay.TextSize = 17
+	overlay.RichText = true
+	overlay.TextXAlignment = Enum.TextXAlignment.Left
+	overlay.TextYAlignment = Enum.TextYAlignment.Top
+	overlay.Position = UDim2.new(0, 40, 0, 0)
+	overlay.Size = UDim2.new(1, -40, 1, 0)
+	overlay.TextWrapped = false
+	overlay.TextColor3 = Color3.fromRGB(255, 255, 255)
+	overlay.ZIndex = 1
+	overlay.Active = false
+	
+	---------------------------------------------------
+	-- MANUAL CARET (native one is hidden under overlay)
+	---------------------------------------------------
+	
+	local caret = parentFrame:FindFirstChild("ManualCaret")
+	if not caret then
+		caret = Instance.new("Frame")
+		caret.Name = "ManualCaret"
+		caret.Parent = parentFrame
+	end
+	
+	caret.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	caret.BorderSizePixel = 0
+	caret.Size = UDim2.fromOffset(2, 17)
+	caret.ZIndex = 3
+	caret.Active = false
+	caret.Visible = false
+	
+	local blink = 0
+	local showCaret = true
+	
+	local function updateCaret()
+		if not textBox:IsFocused() then
+			caret.Visible = false
+			return
+		end
+	
+		local cursor = textBox.CursorPosition
+		if cursor < 0 then
+			caret.Visible = false
+			return
+		end
+	
+		local before = string.sub(textBox.Text, 1, math.max(cursor - 1, 0))
+		local line = 1
+		for _ in string.gmatch(before, "\n") do
+			line += 1
+		end
+		local prefix = before:match("[^\n]*$") or ""
+		local w = TextService:GetTextSize(prefix, 17, Enum.Font.Code, Vector2.new(10000, 20)).X
+		local h = TextService:GetTextSize("Ag", 17, Enum.Font.Code, Vector2.new(10000, 20)).Y
+	
+		caret.Position = UDim2.new(0, 40 + w, 0, (line - 1) * h)
+		caret.Visible = showCaret
+	end
+	
+	---------------------------------------------------
+	-- CANVAS RESIZE
+	---------------------------------------------------
+	
+	local function updateCanvas()
+		local textHeight = textBox.TextBounds.Y + 20
+	
+		if parentFrame:IsA("ScrollingFrame") then
+			parentFrame.CanvasSize = UDim2.new(0, 0, 0, textHeight)
+		end
+	end
+	
+	---------------------------------------------------
+	-- LINE NUMBERS UPDATE
+	---------------------------------------------------
+	
+	local function updateLineNumbers()
+		local lines = 1
+		for _ in string.gmatch(textBox.Text, "\n") do
+			lines += 1
+		end
+	
+		local out = ""
+		for i = 1, lines do
+			out ..= i .. "\n"
+		end
+	
+		lineNumbers.Text = out
+	end
+	
+	---------------------------------------------------
+	-- SYNTAX HIGHLIGHTING
+	---------------------------------------------------
+	
+	local keywords = {
+		["local"] = true, ["function"] = true, ["end"] = true,
+		["if"] = true, ["then"] = true, ["else"] = true, ["elseif"] = true,
+		["for"] = true, ["while"] = true, ["do"] = true, ["repeat"] = true,
+		["until"] = true, ["return"] = true, ["break"] = true, ["continue"] = true,
+		["and"] = true, ["or"] = true, ["not"] = true, ["in"] = true,
+		["nil"] = true, ["true"] = true, ["false"] = true,
+	}
+	
+	local function highlightLuau(text)
+		local output = {}
+		local pos = 1
+	
+		while pos <= #text do
+			local mlStart = string.find(text, "%[%[", pos)
+			local mlEnd
+			if mlStart then
+				mlEnd = string.find(text, "%]%]", mlStart)
+			end
+			if mlStart and mlEnd then
+				if pos < mlStart then
+					table.insert(output, highlightLuau(string.sub(text, pos, mlStart - 1)))
+				end
+				table.insert(output, '<font color="rgb(70,170,70)">' .. string.sub(text, mlStart, mlEnd + 1) .. "</font>")
+				pos = mlEnd + 2
+			else
+				local sComment = string.find(text, "%-%-", pos)
+				local sString1 = string.find(text, '"', pos)
+				local sString2 = string.find(text, "'", pos)
+				local nextSpecial = math.huge
+				local kind
+	
+				if sComment and sComment < nextSpecial then
+					nextSpecial = sComment
+					kind = "comment"
+				end
+				if sString1 and sString1 < nextSpecial then
+					nextSpecial = sString1
+					kind = "string"
+				end
+				if sString2 and sString2 < nextSpecial then
+					nextSpecial = sString2
+					kind = "string"
+				end
+	
+				if not kind then
+					table.insert(output, text:sub(pos))
+					break
+				end
+	
+				if nextSpecial > pos then
+					local before = string.sub(text, pos, nextSpecial - 1)
+					local highlighted = string.gsub(before, "([%a_][%w_]*)", function(word)
+						if keywords[word] then
+							return '<font color="rgb(86,156,214)">' .. word .. "</font>"
+						end
+						return word
+					end)
+					table.insert(output, highlighted)
+				end
+	
+				if kind == "comment" then
+					local nl = string.find(text, "\n", nextSpecial)
+					if nl then
+						table.insert(output, '<font color="rgb(70,170,70)">' .. string.sub(text, nextSpecial, nl - 1) .. "</font>")
+						table.insert(output, "\n")
+						pos = nl + 1
+					else
+						table.insert(output, '<font color="rgb(70,170,70)">' .. string.sub(text, nextSpecial) .. "</font>")
+						break
+					end
+				elseif kind == "string" then
+					local quote = string.sub(text, nextSpecial, nextSpecial)
+					local close = string.find(text, quote, nextSpecial + 1)
+					if close then
+						table.insert(output, '<font color="rgb(206,145,120)">' .. string.sub(text, nextSpecial, close) .. "</font>")
+						pos = close + 1
+					else
+						table.insert(output, '<font color="rgb(206,145,120)">' .. string.sub(text, nextSpecial) .. "</font>")
+						break
+					end
+				end
+			end
+		end
+	
+		return table.concat(output)
+	end
+	
+	---------------------------------------------------
+	-- MAIN LOOP
+	---------------------------------------------------
+	
+	print("[CodeEditor] running: " .. textBox:GetFullName())
+	
+	RunService.RenderStepped:Connect(function(dt)
+		blink += dt
+		if blink >= 0.5 then
+			blink = 0
+			showCaret = not showCaret
+		end
+		updateCaret()
+	
+		local ok, result = pcall(highlightLuau, textBox.Text)
+		if ok then
+			overlay.Text = result
+		else
+			warn("[CodeEditor] highlight failed: " .. tostring(result))
+		end
+		updateLineNumbers()
+		updateCanvas()
+	end)
+	
+	---------------------------------------------------
+	-- BAR 3 BUTTONS (Clear / Execute)
+	---------------------------------------------------
+	
+	local barParent = parentFrame.Parent
+	local bar = barParent and (barParent:FindFirstChild("Bar3") or barParent:FindFirstChild("Bar 3"))
+	
+	if not bar then
+		warn("[CodeEditor] Bar 3 not found under " .. tostring(barParent and barParent:GetFullName()))
+	else
+		local clearBtn = bar:FindFirstChild("Clear")
+		if clearBtn and clearBtn:IsA("GuiButton") then
+			clearBtn.Activated:Connect(function()
+				textBox.Text = ""
+			end)
+		end
+	
+		local attached = false
+	
+		local attachBtn = bar:FindFirstChild("Attatch") or bar:FindFirstChild("Attach")
+		if attachBtn and attachBtn:IsA("GuiButton") then
+			attachBtn.Activated:Connect(function()
+				if attached then
+					pcall(function()
+						game:GetService("StarterGui"):SetCore("SendNotification", {
+							Title = "Attach Error";
+							Text = "You are already attached";
+							Button1 = "Okay";
+							Duration = 5;
+						})
+					end)
+					return
+				end
+				attached = true
+			end)
+		end
+	
+		local execBtn = bar:FindFirstChild("Execute")
+		if execBtn and execBtn:IsA("GuiButton") then
+			execBtn.Activated:Connect(function()
+				if not attached then
+					pcall(function()
+						game:GetService("StarterGui"):SetCore("SendNotification", {
+							Title = "Execution Error";
+							Text = "You must attach the client inorder to execute";
+							Button1 = "Okay";
+							Duration = 5;
+						})
+					end)
+					return
+				end
+				local chunk, compileErr
+				local okLoad, loadErr = pcall(function()
+					chunk, compileErr = loadstring(textBox.Text)
+				end)
+				if not okLoad then
+					warn("[CodeEditor] loadstring unavailable: " .. tostring(loadErr))
+					return
+				end
+				if not chunk then
+					warn("[CodeEditor] compile error: " .. tostring(compileErr))
+					return
+				end
+				local okRun, runErr = pcall(chunk)
+				if not okRun then
+					warn("[CodeEditor] runtime error: " .. tostring(runErr))
+				end
+			end)
+		end
+	end
+end;
+task.spawn(C_14);
+
+return G2L["1"], require;
